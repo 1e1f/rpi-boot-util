@@ -1,0 +1,35 @@
+#!/bin/sh
+
+sudo /boot/chroma/tools/copyCron
+sudo /boot/chroma/tools/listCron
+
+sleep 5
+
+sudo /boot/chroma/tools/networkMonitor &
+
+sleep 5
+
+echo "START PI DISPLAY"
+
+c=0
+while [ $c -ne 1 ]
+do
+echo "Display launch : $c "
+/home/pi/OmsiDisplay
+c=$?
+echo "Display exit : $c "
+sleep 60
+done
+
+#top -p `pgrep -f /home/pi/OmsiDisplay` -b -d 10 -n 3 >> /home/pi/top_log.txt &
+
+echo "pause for 5 mins"
+
+sleep 5m
+
+#echo "kill display"
+#sudo killall -9 OmsiDisplay
+
+#echo "restarting . . ."
+#sudo /sbin/shutdown -r 0
+

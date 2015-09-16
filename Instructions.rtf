@@ -1,0 +1,65 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1347\cocoasubrtf130
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red77\green77\blue77;}
+\margl1440\margr1440\vieww20960\viewh12260\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs48 \cf0 Install Directions for Omsi Signal\
+\
+Mac / OSX\
+\
+\ul Prepare:\ulnone \
+\
+
+\fs32 1. You\'92ll need an 8GB or greater micro SD Card, and a card reader of some kind, but don\'92t insert it yet . . .\
+2. Unzip the disk image 2015-Sep-10_Omsi_Pi_Display.img.gz\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\fs48 \cf0 \ul \ulc0 Install:\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\fs32 \cf0 \ulnone 1. Run the app Pi Filler.app\
+2. Follow the steps, select the 2015-Sep-10_Omsi_Pi_Display.img\
+3. Insert the SD card when prompted\
+4. After the app completes, you should see a new volume called \'91boot\'92 on your mac. you\'92ll use this in the next step if you\'92re setting up wifi.\
+\
+Note: If the installer fails because it says there are 2 or more volumes. Use disk utility to format the SD card to FAT16 first. You shouldn\'92t have to do this with a brand new SD card, but you might if you\'92re reusing an card that already had Raspberry Pi Software on it.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\fs48 \cf0 \ul Configure:\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\fs32 \cf0 \ulnone 1. If you are using an ethernet cable, there is no need to configure wifi, skip the rest of this section!\
+2. Wifi setup: open up the file \'93wifi.conf\'94 on the volume boot/chroma (folder)\
+3. Edit the text in between the quotes for both the SSID (using the name of YOUR network) and PSK (the password for YOUR netword). This task is best done using a text editor that is code friendly, I recommend downloading this one: https://atom.io\
+\
+use the following snippet as an example, but edit the file wifi.conf
+\fs48 \ul \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\fs28 \cf1 \cb2 network=\{\
+	ssid=\'93your_wifi_network_name\'94\
+	psk=\'93your_wifi_password_or_blank\'94\
+\}\
+\cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\fs32 \cf0 \ulnone 4. Save the file, and eject the volume \'93boot\'94\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\fs28 \cf0 \ul \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\fs48 \cf0 Test / Run:\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\fs32 \cf0 \ulnone 1. Plug the SD card into the raspberry pi, hook it up to your screen and wait for it to launch.\
+2. If all went well you should see the splash logo\
+3. If you see the splash logo, and you\'92ve connected ethernet, or the wifi is behaving properly you\'92ll now see a \'91new display\'92 under the displays tab in the content management portal.\
+4. Give it a name, and select a playlist.\
+5. As the new slides download onto the device, you should see them playback on the screen, and also show up on the CMS at the \'92screenshots\'92 section inside the selected display details, on the displays tab.}
